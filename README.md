@@ -16,7 +16,7 @@ The program can be used by running:
 To validate BINAQUAL metric, first download the SynBAD dataset from the following link and extract it in the main directory:
 https://zenodo.org/records/15431990
 
-Then, run the model_validation.py script under the validation directory to apply Binaqual on the SynBAD dataset, as used in the paper's experiments. The results can then be plotted using the plot.py script.
+Then, run the model_validation.py script under the validation directory to apply Binaqual on the SynBAD dataset, as used in the paper's experiments. The results can then be plotted using the plotS.py script.
 
 
 ## Citation
