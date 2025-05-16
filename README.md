@@ -8,7 +8,7 @@ Install the required packages by running:
 ## Usage
 The program can be used by running:
 
-`python -m binaqual --ref /path/to/dir/reference_signal --deg /path/to/dir/degraded_sginal`
+`python -m binaqual --ref /path/to/dir/reference_signal --deg /path/to/dir/test_sginal`
 
 
 ## Validation
