@@ -11,7 +11,7 @@ The program can be used by running:
 `python -m binaqual --ref /path/to/dir/reference_signal --deg /path/to/dir/test_sginal`
 
 
-## Validation
+## Model validation
 
 To validate the BINAQUAL metric, first download the SynBAD dataset from the following link and extract it in the main directory:
 https://zenodo.org/records/15431990
