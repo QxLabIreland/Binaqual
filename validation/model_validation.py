@@ -123,10 +123,13 @@ def compression_test(metadata_path, audio_path, output_path):
     """
     inputs_df = pd.read_csv(metadata_path)
 
-    def get_ref(row):
+        def get_ref(row):
         test = row["file_name"]
-        bitrate = test.split("_")[-1]
-        return test.replace(bitrate, "REF.wav")
+        bitrate = test.split("_")[-2]
+        enc = test.split("_")[-3]
+        if enc == "FOA":
+            test = test.replace("FOA", "HOA")
+        return test.replace(bitrate, "REF")
 
     _process_and_save_results(inputs_df, output_path, audio_path, get_ref)
 
@@ -154,12 +157,12 @@ if __name__ == '__main__':
     output_path = "./results/speakers_layouts_test.csv"
     speaker_layouts_test(metadata_path, audio_path, output_path)
 
-    metadata_path = "../SynBAD/codec_compression/single_source.csv"
+    metadata_path = "../SynBAD/codec_compression/metadata_single_source.csv"
     audio_path = "../SynBAD/codec_compression/"
     output_path = "./results/compression_single_source_test.csv"
     compression_test(metadata_path, audio_path, output_path)
 
-    metadata_path = "../SynBAD/codec_compression/multi_source.csv"
+    metadata_path = "../SynBAD/codec_compression/metadata_multi_source.csv"
     audio_path = "../SynBAD/codec_compression/"
     output_path = f"./results/compression_multi_source_test.csv"
     compression_test(metadata_path, audio_path, output_path)

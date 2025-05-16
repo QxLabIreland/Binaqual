@@ -6,6 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
 from scipy.interpolate import griddata
+import re
 
 
 def calc_mean_ci_for_encoding(df, start_col, end_col, confidence=0.95):
@@ -38,8 +39,9 @@ def calc_mean_ci_for_encoding(df, start_col, end_col, confidence=0.95):
 
 
 def extract_encoding(filename):
-    encoding = filename.split("_")[-1]
-    encoding = encoding.split(".")[0]
+
+    match = re.search(r'(F|H)OA_\d+k', filename)
+    encoding = match.group(0)
 
     return encoding
 
