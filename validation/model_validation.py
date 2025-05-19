@@ -143,26 +143,26 @@ if __name__ == '__main__':
     ir_type = "HRIR"
 
     metadata_path = "../SynBAD/localization_sensitivity/metadata.csv"
-    audio_path = "../SynBAD/localization_sensitivity/"
+    audio_path = "../SynBAD/localization_sensitivity/audio/"
     output_path = "./results/loc_sensitivity_test.csv"
     loc_sensitivity_test(metadata_path, audio_path, output_path, ref_angle, subject_id, ir_type)
 
     metadata_path = "../SynBAD/angle_interpolations/metadata.csv"
-    audio_path = "../SynBAD/angle_interpolations/"
+    audio_path = "../SynBAD/angle_interpolations/audio/"
     output_path = "./results/interpolation_test.csv"
     interpolation_test(metadata_path, audio_path, output_path, subject_id, ir_type)
 
     metadata_path = "../SynBAD/speaker_layouts/metadata.csv"
-    audio_path = "../SynBAD/speaker_layouts/"
+    audio_path = "../SynBAD/speaker_layouts/audio/"
     output_path = "./results/speakers_layouts_test.csv"
     speaker_layouts_test(metadata_path, audio_path, output_path)
 
     metadata_path = "../SynBAD/codec_compression/metadata_single_source.csv"
-    audio_path = "../SynBAD/codec_compression/"
+    audio_path = "../SynBAD/codec_compression/audio/"
     output_path = "./results/compression_single_source_test.csv"
     compression_test(metadata_path, audio_path, output_path)
 
     metadata_path = "../SynBAD/codec_compression/metadata_multi_source.csv"
-    audio_path = "../SynBAD/codec_compression/"
+    audio_path = "../SynBAD/codec_compression/audio/"
     output_path = f"./results/compression_multi_source_test.csv"
     compression_test(metadata_path, audio_path, output_path)
