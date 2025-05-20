@@ -20,7 +20,9 @@ Then, run the model_validation.py script under the validation directory to apply
 
 
 ## Citation
-If you use this code, please cite the associated paper:
+If you use this code, please cite the associated [paper](http://arxiv.org/abs/2505.11915):
+
+
 
 
 ## Licence
