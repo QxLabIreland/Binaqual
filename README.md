@@ -1,5 +1,5 @@
 # Binaqual
-Python implementation of BINAQUAL localization similarity metric for binaural audio.
+Python implementation of BINAQUAL full-reference localization similarity metric for binaural audio.
 ## Setup
 Install the required packages by running:
 
