@@ -33,7 +33,7 @@ If you use this code, please cite the associated [paper](http://arxiv.org/abs/25
 }
 ```
 
-If you use the SynBAD dataset, the above paper, as well as the Binamix library paper:
+If you use the SynBAD dataset, cite the above paper and the Binamix library [paper](https://arxiv.org/abs/2505.01369):
 
 ```bibtex
 @misc{barry2025binamixpythonlibrary,
