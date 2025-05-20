@@ -33,5 +33,21 @@ If you use this code, please cite the associated [paper](http://arxiv.org/abs/25
 }
 ```
 
+If you use the SynBAD dataset, the above paper, as well as the Binamix library paper:
+
+```bibtex
+@misc{barry2025binamixpythonlibrary,
+      title={Binamix - A Python Library for Generating Binaural Audio Datasets}, 
+      author={Dan Barry and Davoud Shariat Panah and Alessandro Ragano and Jan Skoglund and Andrew Hines},
+      year={2025},
+      eprint={2505.01369},
+      journal={arXiv preprint arXiv:2505.01369},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD},
+      url={https://arxiv.org/abs/2505.01369}, 
+}
+```
+
+
 ## Licence
 This project is licensed under the Apache 2.0 License.
