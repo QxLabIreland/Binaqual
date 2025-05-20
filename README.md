@@ -21,7 +21,16 @@ Then, run the model_validation.py script under the validation directory to apply
 
 ## Citation
 If you use this code, please cite the associated [paper](http://arxiv.org/abs/2505.11915):
-
+```bibtex
+@misc{panah2025binaqualfullreferenceobjectivelocalization,
+      title={BINAQUAL: A Full-Reference Objective Localization Similarity Metric for Binaural Audio}, 
+      author={Davoud Shariat Panah and Dan Barry and Alessandro Ragano and Jan Skoglund and Andrew Hines},
+      year={2025},
+      eprint={2505.11915},
+      archivePrefix={arXiv},
+      primaryClass={eess.AS},
+      url={https://arxiv.org/abs/2505.11915}, 
+}
 
 
 
