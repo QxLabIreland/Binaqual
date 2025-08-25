@@ -189,7 +189,7 @@ def loc_sensitivity_sphere_plots(results_path):
         plot_half_sphere(azimuths_deg, elevations_deg, ls_lst, plot_title=source)
 
 
-def loc_sensitivity_line_plots(results_path):
+def loc_sensitivity_line_plots(results_path, source="castanets"):
 
     df = pd.read_csv(results_path)
 
@@ -210,7 +210,7 @@ def loc_sensitivity_line_plots(results_path):
     # Append duplicated rows to the filtered DataFrame
     df = pd.concat([df_filtered, df_180], ignore_index=True)
 
-    df = df[df["source"] == "Female Reverb"]
+    df = df[df["source"] == source]
 
     # Ensure correct data types
     df["az"] = df["az"].astype(float)
@@ -233,9 +233,9 @@ def loc_sensitivity_line_plots(results_path):
         plt.plot(subset["az"], subset["LS"], line_styles[i % len(line_styles)], label=f"El={int(el)}°")
 
     # Formatting
-    plt.title("Female rev., Reference Az=0°,El=0°", fontsize=16)
+    plt.title(f"{source}, Reference Az=0°,El=0°", fontsize=16)
     plt.xlabel("Azimuth (°)", fontsize=16)
-    plt.ylabel("LS", fontsize=16)
+    plt.ylabel("ITD_SIM", fontsize=16)
     plt.legend(loc="upper left", fontsize=14)
     plt.xticks(range(-180, 181, 30), fontsize=12)  # Set x-axis ticks from -180 to 180
     plt.yticks(fontsize=12)
@@ -243,7 +243,7 @@ def loc_sensitivity_line_plots(results_path):
     plt.xlim(-180, 180)
     plt.ylim(0, 1)
 
-    plt.savefig("./plots/localization_sensitivity_line_female_rev.png")
+    plt.savefig(f"./plots/localization_sensitivity_line_{source}.png")
 
     # Show plot
     plt.show()
@@ -427,7 +427,7 @@ if __name__ == '__main__':
 
     result_path = "./results/loc_sensitivity_test.csv"
     loc_sensitivity_sphere_plots(result_path)
-    loc_sensitivity_line_plots(result_path)
+    loc_sensitivity_line_plots(result_path, source="castanets")
 
     result_path = "./results/interpolation_test.csv"
     interpolation_plots(result_path)
